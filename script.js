@@ -138,7 +138,6 @@ function getPasswordOptions() {
     return null;
   }
 
-  // Object to store user input
   var passwordOptions = {
     length: length,
     hasSpecialCharacters: hasSpecialCharacters,
@@ -150,7 +149,6 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
-// Function for getting a random element from an array
 function getRandom(arr) {
   var randIndex = Math.floor(Math.random() * arr.length);
   var randElement = arr[randIndex];
@@ -158,7 +156,7 @@ function getRandom(arr) {
   return randElement;
 }
 
-// Function to generate password with user input
+
 function generatePassword() {
   var options = getPasswordOptions();
   var result = [];
@@ -181,8 +179,6 @@ function generatePassword() {
     possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
     guaranteedCharacters.push(getRandom(upperCasedCharacters));
   }
-
-  // For loop to iterate over the password length from the options object, selecting random indices from the array of possible characters and concatenating those characters into the result variable
   for (var i = 0; i < options.length; i++) {
     var possibleCharacter = getRandom(possibleCharacters);
 
@@ -205,4 +201,3 @@ function writePassword() {
 }
 
 
-generateBtn.addEventListener('click', writePassword);

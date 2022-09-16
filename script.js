@@ -157,7 +157,7 @@ function getRandom(arr) {
 }
 
 
-  
+function generatePassword() {
   var options = getPasswordOptions();
   var result = [];
   var possibleCharacters = [];

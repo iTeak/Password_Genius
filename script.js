@@ -157,7 +157,7 @@ function getRandom(arr) {
 }
 
 
-function generatePassword() {
+  
   var options = getPasswordOptions();
   var result = [];
   var possibleCharacters = [];
@@ -201,3 +201,4 @@ function writePassword() {
 }
 
 
+generateBtn.addEventListener('click', writePassword);
